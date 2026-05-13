@@ -6,6 +6,7 @@ AB_OTA_PARTITIONS += \
     dpm \
     gz \
     lk \
+    logo \
     mcupm \
     md1img \
     pi_img \
