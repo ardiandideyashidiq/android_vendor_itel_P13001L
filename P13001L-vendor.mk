@@ -73,6 +73,7 @@ PRODUCT_COPY_FILES += \
     vendor/itel/P13001L/proprietary/recovery/root/vendor/firmware/novatek_ts_fw_144.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw_144.bin \
     vendor/itel/P13001L/proprietary/recovery/root/vendor/firmware/novatek_ts_fw_jdi.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw_jdi.bin \
     vendor/itel/P13001L/proprietary/recovery/root/vendor/firmware/novatek_ts_fw_tm.bin:$(TARGET_COPY_OUT_RECOVERY)/root/vendor/firmware/novatek_ts_fw_tm.bin \
+    vendor/itel/P13001L/proprietary/system_ext/etc/init/kpoc_charger.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/kpoc_charger.rc \
     vendor/itel/P13001L/proprietary/vendor/app/t6/02662e8e-e126-11e5-b86d9a79f06e9478.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/02662e8e-e126-11e5-b86d9a79f06e9478.ta \
     vendor/itel/P13001L/proprietary/vendor/app/t6/9ef77781-7bd5-4e39-965f20f6f211f400.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/9ef77781-7bd5-4e39-965f20f6f211f400.ta \
     vendor/itel/P13001L/proprietary/vendor/app/t6/b46325e6-5c90-8252-2eada8e32e5180d6.ta:$(TARGET_COPY_OUT_VENDOR)/app/t6/b46325e6-5c90-8252-2eada8e32e5180d6.ta \
@@ -1188,6 +1189,7 @@ PRODUCT_PACKAGES += \
     libem_audio_jni \
     libem_support_jni \
     libem_wifi_jni \
+    libshowlogo \
     EngineerMode \
     YGPS \
     android.hardware.neuralnetworks-shim-service-mtk.xml \
@@ -1252,7 +1254,8 @@ PRODUCT_PACKAGES += \
     wfca \
     wlan_assistant \
     wmt_launcher \
-    wmt_loader
+    wmt_loader \
+    kpoc_charger
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_graphics_allocator@4_0-service-mediatek \
