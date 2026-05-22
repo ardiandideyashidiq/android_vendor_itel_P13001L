@@ -1661,7 +1661,6 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libbase",
                 "libz",
-                "arm.graphics-V1-ndk_platform",
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
@@ -4124,6 +4123,56 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libarm_egl_properties_sysprop",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libarm_egl_properties_sysprop.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libarm_gralloc_properties_sysprop",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libarm_gralloc_properties_sysprop.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libarmnn",
     owner: "itel",
     strip: {
@@ -5128,14 +5177,14 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_mtk_c2store.so",
             ],
             shared_libs: [
-                "libcodec2_soft_common-v31",
+                "libcodec2_soft_common",
                 "libcutils",
                 "liblog",
-                "libsfplugin_ccodec_utils-v31",
+                "libsfplugin_ccodec_utils",
                 "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
-                "libcodec2_vndk-v31",
+                "libcodec2_vndk",
                 "libutils",
                 "libion",
                 "libion_mtk",
@@ -5167,21 +5216,21 @@ cc_prebuilt_library_shared {
                 "libformatter",
                 "libdpframework",
                 "android.hardware.graphics.bufferqueue@2.0",
-                "libui-v34",
+                "libui",
                 "libgralloc_extra",
                 "libexpat",
                 "libsync",
                 "libhidlbase",
                 "libhwbinder",
                 "libged",
-                "libcodec2_soft_common-v31",
+                "libcodec2_soft_common",
                 "libcutils",
                 "liblog",
-                "libsfplugin_ccodec_utils-v31",
+                "libsfplugin_ccodec_utils",
                 "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
-                "libcodec2_vndk-v31",
+                "libcodec2_vndk",
                 "libutils",
                 "libion",
                 "libdmabufheap",
@@ -5216,58 +5265,26 @@ cc_prebuilt_library_shared {
                 "libformatter",
                 "libdpframework",
                 "android.hardware.graphics.bufferqueue@2.0",
-                "libui-v34",
+                "libui",
                 "libgralloc_extra",
                 "libexpat",
                 "libsync",
                 "libhidlbase",
                 "libhwbinder",
                 "libged",
-                "libcodec2_soft_common-v31",
+                "libcodec2_soft_common",
                 "libcutils",
                 "liblog",
-                "libsfplugin_ccodec_utils-v31",
+                "libsfplugin_ccodec_utils",
                 "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
-                "libcodec2_vndk-v31",
+                "libcodec2_vndk",
                 "libutils",
                 "libion",
                 "libdmabufheap",
                 "libion_mtk",
                 "libcodec2_mtk_c2store",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libcodec2_soft_common-v31",
-    owner: "itel",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_soft_common-v31.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk-v31",
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libsfplugin_ccodec_utils-v31",
-                "libstagefright_foundation-v33",
                 "libc++",
                 "libc",
                 "libm",
@@ -5452,46 +5469,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_vndk-v31",
-    owner: "itel",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libcodec2_vndk-v31.so",
-            ],
-            shared_libs: [
-                "android.hardware.graphics.bufferqueue@2.0",
-                "android.hardware.graphics.common@1.2",
-                "android.hardware.media.bufferpool@2.0",
-                "libbase",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "libion",
-                "libdmabufheap",
-                "libfmq",
-                "liblog",
-                "libnativewindow",
-                "libstagefright_foundation-v33",
-                "libstagefright_bufferpool@2.0.1",
-                "libui-v34",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libcodec2_vpp_qt_plugin",
     owner: "itel",
     strip: {
@@ -5503,11 +5480,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_vpp_qt_plugin.so",
             ],
             shared_libs: [
-                "libcodec2_soft_common-v31",
-                "libsfplugin_ccodec_utils-v31",
+                "libcodec2_soft_common",
+                "libsfplugin_ccodec_utils",
                 "libstagefright_foundation-v33",
                 "libcodec2",
-                "libcodec2_vndk-v31",
+                "libcodec2_vndk",
                 "liblog",
                 "libbase",
                 "libutils",
@@ -5536,11 +5513,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_vpp_rs_plugin.so",
             ],
             shared_libs: [
-                "libcodec2_soft_common-v31",
-                "libsfplugin_ccodec_utils-v31",
+                "libcodec2_soft_common",
+                "libsfplugin_ccodec_utils",
                 "libstagefright_foundation-v33",
                 "libcodec2",
-                "libcodec2_vndk-v31",
+                "libcodec2_vndk",
                 "liblog",
                 "libbase",
                 "libutils",
@@ -6327,6 +6304,31 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblibarm_mali_config_sysprops",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/liblibarm_mali_config_sysprops.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -7893,38 +7895,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsfplugin_ccodec_utils-v31",
-    owner: "itel",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libsfplugin_ccodec_utils-v31.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcodec2",
-                "libcodec2_vndk-v31",
-                "libcutils",
-                "liblog",
-                "libnativewindow",
-                "libstagefright_foundation-v33",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libspeech_enh_lib",
     owner: "itel",
     strip: {
@@ -7966,41 +7936,6 @@ cc_prebuilt_library_shared {
                 "libaudioutils",
                 "libmedia_helper",
                 "libxml2",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libstagefright_bufferqueue_helper-v31",
-    owner: "itel",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libstagefright_bufferqueue_helper-v31.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcutils",
-                "libhidlbase",
-                "libhidlmemory",
-                "liblog",
-                "libstagefright_foundation",
-                "libui",
-                "libutils",
-                "android.hardware.graphics.bufferqueue@1.0",
-                "android.hardware.graphics.bufferqueue@2.0",
-                "libgui",
                 "libc++",
                 "libc",
                 "libm",
@@ -8617,6 +8552,32 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/mt6789/arm.graphics-V1-ndk_platform.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "mt6789",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "arm.graphics-V3-ndk",
+    owner: "itel",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/mt6789/arm.graphics-V3-ndk.so",
             ],
             shared_libs: [
                 "libbinder_ndk",
@@ -19652,15 +19613,6 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
-prebuilt_etc_xml {
-    name: "manifest_media_c2_V1_2_default.xml",
-    owner: "itel",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "bip",
     owner: "itel",
@@ -19939,49 +19891,6 @@ cc_prebuilt_binary {
                 "android.hardware.gnss.visibility_control@1.0",
                 "android.hardware.gnss-V1-ndk",
                 "android.hardware.gnss-impl-mediatek",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.media.c2@1.2-mediatek-64b",
-    owner: "itel",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b",
-            ],
-            shared_libs: [
-                "libstagefright_foundation-v33",
-                "libbase",
-                "liblog",
-                "libcodec2",
-                "libutils",
-                "android.hardware.media.c2@1.0",
-                "android.hardware.media.c2@1.1",
-                "android.hardware.media.c2@1.2",
-                "libcodec2_hidl@1.0",
-                "libcodec2_hidl@1.1",
-                "libcodec2_hidl@1.2",
-                "libcodec2_vndk",
-                "libhidlbase",
-                "libavservices_minijail",
-                "libbinder",
-                "libcodec2_mtk_c2store",
-                "libcodec2_mtk_vdec",
-                "libcodec2_mtk_venc",
                 "libc++",
                 "libc",
                 "libm",
@@ -21399,6 +21308,13 @@ install_symlink {
     soc_specific: true,
     installed_location: "lib64/arm.graphics-V1-ndk_platform.so",
     symlink_target: "/vendor/lib64/mt6789/arm.graphics-V1-ndk_platform.so",
+}
+
+install_symlink {
+    name: "vendor_lib64_arm_graphics-V3-ndk_so",
+    soc_specific: true,
+    installed_location: "lib64/arm.graphics-V3-ndk.so",
+    symlink_target: "/vendor/lib64/mt6789/arm.graphics-V3-ndk.so",
 }
 
 install_symlink {

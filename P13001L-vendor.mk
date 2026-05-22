@@ -223,10 +223,14 @@ PRODUCT_COPY_FILES += \
     vendor/itel/P13001L/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml \
     vendor/itel/P13001L/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml \
     vendor/itel/P13001L/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml \
+    vendor/itel/P13001L/proprietary/vendor/etc/gralloc/cam.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/cam.xml \
+    vendor/itel/P13001L/proprietary/vendor/etc/gralloc/dpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu.xml \
+    vendor/itel/P13001L/proprietary/vendor/etc/gralloc/dpu_aeu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/dpu_aeu.xml \
+    vendor/itel/P13001L/proprietary/vendor/etc/gralloc/gpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/gpu.xml \
+    vendor/itel/P13001L/proprietary/vendor/etc/gralloc/vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gralloc/vpu.xml \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.4-service.widevine.rc \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
-    vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/itel/P13001L/proprietary/vendor/etc/init/android.hardware.security.keymint-service.trustkernel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.trustkernel.rc \
@@ -292,6 +296,7 @@ PRODUCT_COPY_FILES += \
     vendor/itel/P13001L/proprietary/vendor/etc/ipsec/ipsec.d/cacerts/thawte.der:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ipsec.d/cacerts/thawte.der \
     vendor/itel/P13001L/proprietary/vendor/etc/ipsec/ssl/openssl.cnf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/ssl/openssl.cnf \
     vendor/itel/P13001L/proprietary/vendor/etc/ipsec/strongswan.conf:$(TARGET_COPY_OUT_VENDOR)/etc/ipsec/strongswan.conf \
+    vendor/itel/P13001L/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/itel/P13001L/proprietary/vendor/etc/media_codecs_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
     vendor/itel/P13001L/proprietary/vendor/etc/meow.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/meow.cfg \
     vendor/itel/P13001L/proprietary/vendor/etc/mtk_platform_codecs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtk_platform_codecs_config.xml \
@@ -694,6 +699,8 @@ PRODUCT_PACKAGES += \
     libapu_mdw_batch \
     libapusys \
     libapusys_edma \
+    libarm_egl_properties_sysprop \
+    libarm_gralloc_properties_sysprop \
     libarmnn \
     libarmnn_ndk.mtk.vndk \
     libaudio_param_parser-vnd \
@@ -733,13 +740,11 @@ PRODUCT_PACKAGES += \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
-    libcodec2_soft_common-v31 \
     libcodec2_soft_mtk_alacdec \
     libcodec2_soft_mtk_apedec \
     libcodec2_soft_mtk_imaadpcmdec \
     libcodec2_soft_mtk_mp3dec \
     libcodec2_soft_mtk_msadpcmdec \
-    libcodec2_vndk-v31 \
     libcodec2_vpp_qt_plugin \
     libcodec2_vpp_rs_plugin \
     libcomposer_ext \
@@ -769,6 +774,7 @@ PRODUCT_PACKAGES += \
     libkphhelper \
     libkphproxy \
     libksensor \
+    liblibarm_mali_config_sysprops \
     libmipc \
     libmmagent \
     libmml \
@@ -823,10 +829,8 @@ PRODUCT_PACKAGES += \
     librilfusion \
     librpc \
     librt_extamp_intf \
-    libsfplugin_ccodec_utils-v31 \
     libspeech_enh_lib \
     libspeechparser_vendor \
-    libstagefright_bufferqueue_helper-v31 \
     libstorage_otp \
     libsysenv \
     libteec \
@@ -849,6 +853,7 @@ PRODUCT_PACKAGES += \
     libwvhidl \
     libwvdrmengine \
     arm.graphics-V1-ndk_platform \
+    arm.graphics-V3-ndk \
     bf2257l_mipi_raw_IdxMgr \
     gc08a3_mipi_raw_IdxMgr \
     gc08a3_mipi_raw_tuning \
@@ -1205,7 +1210,6 @@ PRODUCT_PACKAGES += \
     manifest_apuware_utils.xml \
     manifest_cameraprovider.xml \
     manifest_hwcomposer.xml \
-    manifest_media_c2_V1_2_default.xml \
     bip \
     bip_ap \
     ccci_mdinit \
@@ -1216,7 +1220,6 @@ PRODUCT_PACKAGES += \
     gsm0710muxd \
     android.hardware.drm@1.4-service.widevine \
     android.hardware.gnss-service.mediatek \
-    android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks-shim-service-mtk \
     android.hardware.secure_element@1.2-service-mediatek \
     android.hardware.security.keymint-service.trustkernel \
@@ -1285,6 +1288,7 @@ PRODUCT_PACKAGES += \
     vendor_lib64_hw_vulkan_mali_so \
     vendor_lib64_hw_sensors_mt6789_so \
     vendor_lib64_arm_graphics-V1-ndk_platform_so \
+    vendor_lib64_arm_graphics-V3-ndk_so \
     vendor_lib64_bf2257l_mipi_raw_IdxMgr_so \
     vendor_lib64_gc08a3_mipi_raw_IdxMgr_so \
     vendor_lib64_gc08a3_mipi_raw_tuning_so \
