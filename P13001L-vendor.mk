@@ -473,6 +473,7 @@ PRODUCT_COPY_FILES += \
     vendor/itel/P13001L/proprietary/vendor/firmware/WMT_SOC.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/WMT_SOC.cfg \
     vendor/itel/P13001L/proprietary/vendor/firmware/WMT_SOC_CO_CLK.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/WMT_SOC_CO_CLK.cfg \
     vendor/itel/P13001L/proprietary/vendor/firmware/aw87xxx_acf.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw87xxx_acf.bin \
+    vendor/itel/P13001L/proprietary/vendor/firmware/awinic_params.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/awinic_params.bin \
     vendor/itel/P13001L/proprietary/vendor/firmware/fm_cust.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/fm_cust.cfg \
     vendor/itel/P13001L/proprietary/vendor/firmware/focaltech_ts_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw.bin \
     vendor/itel/P13001L/proprietary/vendor/firmware/gt9886_cfg_6781v01.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9886_cfg_6781v01.bin \
@@ -1235,7 +1236,6 @@ PRODUCT_PACKAGES += \
     vtservice_hidl \
     ipsec_mon \
     lbs_hidl_service \
-    mid_uart_dock \
     mid_uart_dock \
     mnld \
     v3avpud.mt6789 \

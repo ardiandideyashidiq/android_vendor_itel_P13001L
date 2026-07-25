@@ -20456,14 +20456,6 @@ cc_prebuilt_binary {
     soc_specific: true,
 }
 
-sh_binary {
-    name: "mid_uart_dock",
-    owner: "itel",
-    src: "proprietary/vendor/bin/mid_uart_dock.sh",
-    filename: "mid_uart_dock.sh",
-    soc_specific: true,
-}
-
 cc_prebuilt_binary {
     name: "mnld",
     owner: "itel",
